@@ -1,0 +1,369 @@
+/* Стили ко всему документу */
+
+body {
+  font: 16px Trebuchet MS, sans-serif;
+  background: #fff;
+  display: grid;
+  min-width: 320px;
+  min-height: 100%;
+  position: relative;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Стили ко всем картинкам */
+
+img {
+  border-radius: 3px;
+}
+
+/* Стили ко всем ссылкам */
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  line-height: 32px;
+  font: 16px Trebuchet MS, sans-serif;
+}
+
+a:hover {
+  color: crimson;
+}
+
+/* Стили для блоков сетки */
+
+.grid {
+  display: grid;
+}
+
+/* Стили для обертки */
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  grid-row-gap: 40px;
+  grid-column-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(50px, auto);
+}
+
+/* Стили шапки сайта */
+
+.header {
+  grid-column: 1/4;
+  width: 100%;
+  background-color: #fff;
+  align-self: center;
+  border-bottom: groove;
+  padding: 14px 0 14px 0;
+}
+
+.navLink {
+  padding: 0 0 0 40px
+}
+
+.navLink:first-child {
+  padding: 0 0 0 100px;
+}
+
+/* Стили блока поиск */
+
+.searchForm {
+  display: inline;
+  color: lightgrey;
+  position: absolute;
+  right: 200px;
+  top: 8px;
+}
+
+.searchForm input {
+  border-radius: 4px;
+  border: none;
+  -webkit-box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.1);
+  padding: 6px 14px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 74px;
+}
+
+/* Стили кнопки вход */
+
+.logIn {
+  background: #757575;
+  color: #fff;
+  height: 20px;
+  padding: 7px 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  position: absolute;
+  right: 100px;
+  top: 8px;
+}
+
+/* Стили правой колонки (Реклама/меню) */
+
+.aside {
+  grid-row: 2/5;
+  grid-column: 3/3;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(10px, auto);
+  grid-row-gap: 20px;
+  margin: 0 100px 0 0;
+  align-content: start; 
+}
+
+.asideTitle {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.asideItem {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(10px, auto);
+}
+
+.asideItem p, a {
+  font-size: 14px;
+  margin: 0;
+}
+
+.asideItem h4 {
+  margin: 0;
+}
+
+.asideItemButton {
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  background-color: rgb(243, 243, 243);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  line-height: 32px;
+  font: 16px Trebuchet MS, sans-serif;
+}
+
+.asideItemButton:hover {
+  color: crimson;
+}
+
+/* Стили первой самой большой статьи */
+
+.articleMain {
+  grid-row: 2/5;
+  grid-column: 1/3;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(10px, 400px);
+  grid-row-gap: 10px;
+  margin: 0 0 0 100px;
+}
+
+.articleMain img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.articleMain div {
+  width: 100%;
+  height: 100%;
+}
+
+.articleMain p {
+  margin: 0;
+  padding: 20px 0 0 0;
+  text-indent: 30px;
+  font: 1.1em "Fira Sans", serif;
+}
+
+/* Стили блока с комментариями */
+
+.comments {
+  grid-row: 5;
+  grid-column: 1/3;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(10px, auto);
+  margin: 0 0 0 100px;
+}
+
+.comments h1 {
+  letter-spacing: 2px;
+  font: 1.5em "Fira Sans", serif;
+  text-align: center;
+  color: rgb(160, 160, 160);
+}
+
+.comments hr {
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+/* Стили подвала */
+
+footer {
+  grid-row: 6;
+  width: 100%;
+  grid-column: 1/4;
+  grid-template-rows: minmax(50px, auto);
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  padding-top: 20px;
+  text-align: right;
+}
+
+footer a {
+  margin-right: 20px;
+}
+
+/* Анимация прокрутки в начало */
+
+.scroll-up {
+  position: fixed;
+	display: none;
+	z-index: 999;
+	bottom: 6em;
+	left: 2em;
+}
+
+.scroll-up a {
+  background-color: white;
+	display: block;
+	width: 48px;
+  height: 48px;
+  border-radius: 25px;
+}
+
+.scroll-up a:hover {
+  background-color: rgba(235, 235, 235, .8);
+}
+
+/* Адаптивные стили под разные устройства */
+
+@media (min-width: 800px) and (max-width: 1024px) {
+  .searchForm {
+    padding: 0 0 0 80px;
+    position: static;
+  }
+
+  .navLink {
+    padding: 0 0 0 20px
+  }
+
+  .header {
+    padding: 14px 0 14px 100px;
+  }
+
+  .searchForm input {
+    padding: 3px 3px;
+  }
+
+  .logIn {
+    padding: 0 12px 12px 0;
+    position: static;
+  }
+}
+
+@media (min-width: 670px) and (max-width: 800px) {
+  .searchForm {
+    padding: 0 0 0 30px;
+    position: static;
+  }
+
+  .navLink {
+    padding: 0 0 0 5px
+  }
+
+  .header {
+    padding: 14px 0 14px 100px;
+  }
+
+  .searchForm input {
+    padding: 3px 3px;
+  }
+
+  .logIn {
+    padding: 0 12px 10px 0;
+    position: static;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 670px) {
+  .searchForm {
+    padding: 0 0 0 0;
+    position: static;
+  }
+
+  .header {
+    padding: 14px 0 14px 0;
+  }
+  body {
+    font: 14px Trebuchet MS, sans-serif; 
+  }
+
+  .searchForm input {
+    font-size: 12px;
+    padding: 3px 3px;
+  }
+
+  .navLink {
+    padding: 0 0 0 5px
+  }
+
+  .logIn {
+    font-size: 10px;
+    padding: 0 12px 6px 0;
+    position: static;
+  }
+
+  .logIn img {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 400px) {
+  .searchForm {
+    padding: 0 0 0 0;
+    position: static;
+  }
+
+  .header {
+    padding: 14px 0 14px 0;
+  }
+  body {
+    font: 12px Trebuchet MS, sans-serif; 
+  }
+
+  .searchForm input {
+    font-size: 10px;
+    padding: 3px 3px;
+  }
+
+  .navLink {
+    padding: 0 0 0 5px
+  }
+
+  .logIn {
+    font-size: 8px;
+    padding: 0 12px 6px 0;
+    position: static;
+  }
+
+  .logIn img {
+    height: 12px;
+    width: 12px;
+  }
+}
