@@ -25,12 +25,15 @@
         
       <!-- Навигационный блок -->
 
-      <nav>
-        <a class="navLink" href="#">Лого сайта</a>
-        <a class="navLink" href="#">Новости</a>
-        <a class="navLink" href="#">Бизнес</a>
-        <a class="navLink" href="#">Технологии</a>
-        <a class="navLink" href="#">Карьера</a>
+      <nav class="navLink">
+        <ul>
+          <li><a href="#">Лого сайта</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Бизнес</a></li>
+          <li><a href="#">Технологии</a></li>
+          <li><a href="#">Карьера</a></li>
+        </ul>
+        
         <form class="searchForm" action="#">
           <input class="search" type="text" placeholder="&#128269 ПОИСК" name="search">
         </form>
@@ -61,7 +64,7 @@
     
           foreach($allArticles as $oneNews): 
         ?>
-        <a class="asideItem grid" href="pages/oneArticle.php?id=<?php echo $oneNews['id'];?>">
+        <a class="asideItem wow bounceInUp slow grid" href="pages/oneArticle.php?id=<?php echo $oneNews['id'];?>">
           <h4><?=$oneNews['title'];?></h4>
           <p><?=$oneNews['smallText'];?></p>
         </a>
@@ -85,7 +88,7 @@
 
       <!-- Список всех статей по убыванию -->
 
-      <div class="articlesList grid">
+      <div class="articlesList wow bounceInUp slow grid">
 
         <?php
 
@@ -95,7 +98,7 @@
 
           foreach($allArticlesMain as $oneNewsMain): 
         ?>
-        <a class="articleListItem grid" href="pages/oneArticle.php?id=<?php echo $oneNewsMain['id'];?>">
+        <a class="articleListItem wow bounceInUp slow grid" href="pages/oneArticle.php?id=<?php echo $oneNewsMain['id'];?>">
           <img src="images/articles/<?=$oneNewsMain['id'];?>.jpg" alt="">
           <div><?=$oneNewsMain['smallText'];?></div>
         </a>

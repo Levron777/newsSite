@@ -26,10 +26,12 @@ a {
   cursor: pointer;
   line-height: 32px;
   font: 16px Trebuchet MS, sans-serif;
+  transition: all 0.5s ease;
 }
 
 a:hover {
   color: crimson;
+  transition: all 0.5s ease;
 }
 
 /* Стили для блоков сетки */
@@ -61,8 +63,23 @@ a:hover {
   padding: 14px 0;
 }
 
-.navLink {
-  padding: 0 0 0 40px
+.navLink *{
+  margin: 0;
+  padding: 0;
+}
+
+.navLink ul,
+.navLink ol {
+  list-style: none;
+}
+
+.navLink > ul {
+  display: flex;
+}
+
+.navLink > ul li a {
+  display: block;
+  padding: 0 30px;
 }
 
 .navLink:first-child {
@@ -322,8 +339,8 @@ footer a {
     right: 155px;
   }
 
-  .navLink {
-    padding: 0 0 0 20px
+  .navLink > ul li a {
+    padding: 0 18px;
   }
 
   .searchForm input {
@@ -388,8 +405,8 @@ footer a {
     right: 120px;
   }
 
-  .navLink {
-    padding: 0 0 0 5px
+  .navLink > ul li a {
+    padding: 0 14px;
   }
 
   .searchForm input {
@@ -454,12 +471,12 @@ footer a {
   }
   
   .searchForm {
-    top: 10px;
+    top: 5px;
     right: 60px;
   }
 
-  .navLink {
-    padding: 0 0 0 5px
+  .navLink > ul li a {
+    padding: 0 8px;
   }
 
   .searchForm input {
@@ -469,7 +486,7 @@ footer a {
   }
 
   .logIn {
-    top: 10px;
+    top: 7px;
     padding: 0 4px;
     right: 10px;
   }
@@ -528,12 +545,12 @@ footer a {
   }
   
   .searchForm {
-    top: 10px;
+    top: 4px;
     right: 55px;
   }
 
-  .navLink {
-    padding: 0 0 0 5px
+  .navLink > ul li a {
+    padding: 0 5px;
   }
 
   .searchForm input {
@@ -543,7 +560,7 @@ footer a {
   }
 
   .logIn {
-    top: 10px;
+    top: 6px;
     padding: 0 4px;
     right: 5px;
   }
