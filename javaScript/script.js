@@ -48,7 +48,7 @@ $(document).ready(function() {
       
       success: function(data) {
         if (data.result == "success") {
-          $('.articleListItem:nth-last-child(2)').after(data.html);
+          $('.articleListItem:last-child').after(data.html);
           btnMoreMain.val('Показать еще');
           btnMoreMain.attr('countShowMain', (countShowMain + 3));
         }else {
